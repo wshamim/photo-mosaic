@@ -3,7 +3,8 @@
   "name": "mosaic",
   "version": "0.0.0",
   "scripts": {
-    "start": "node server.js"
+      "start": "babel ES6 -d js && node server.js",
+      "build": "babel ES6 -d js"
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",
