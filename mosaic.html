@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.20.5/system.js"></script>
     <script type="text/javascript" src="js/mosaic.js"></script>
-    <script type="text/javascript" src="js/client.js"></script>
+    <!--script type="text/javascript" src="js/client.js"></script-->
+    <script>
+      System.config({ "baseURL": "js" });
+      System.import("client.js");
+    </script>
     <title>Mosaic</title>
   </head>
   <body>
     <!-- Edit me. -->
+    <header>
+      <h1>Photo Mosaic</h1>
+      <input type="file" id="inputFile" />
+      <button id="createMosaic">Create Mosaic</button>
+    </header>
+    <canvas id="mosaicCanvas" width="0" height="0"></canvas>
+    <canvas id="srcCanvas" width="200" height="200"></canvas>
   </body>
 </html>
